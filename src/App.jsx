@@ -2,7 +2,8 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Begin hier met met maken van de applicatie!</h1>
+    <h1>Tech IT easy dashboard</h1>
+
   )
 }
 

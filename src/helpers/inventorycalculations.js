@@ -1,7 +1,7 @@
 import {inventory} from "../constants/inventory.js";
 
 //opdracht 1a
-const totalSoldProducts = () =>{
+export const totalSoldProducts = () =>{
     let totalSoldProducts = 0;
     let totalOriginalStock = 0;
     for(let i =0; i<inventory.length;i++) {
@@ -10,3 +10,14 @@ const totalSoldProducts = () =>{
     }
     return totalOriginalStock - totalSoldProducts;
 }
+
+//opdracht 1c
+export const totalTVsCompanyPurchased = () =>{
+    let totalOriginalStock = 0;
+    for(let i =0; i<inventory.length;i++){
+        totalOriginalStock += inventory[i].originalStock;
+    }
+    return totalOriginalStock;
+}
+
+
