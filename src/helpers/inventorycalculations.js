@@ -18,4 +18,13 @@ export const totalTVsCompanyPurchased = () =>{
     return totalOriginalStock;
 }
 
-
+//opdracht 1e
+export const totalInStockProducts = () =>{
+    let totalSoldProducts = 0;
+    let totalOriginalStock = 0;
+    for(let i =0; i<inventory.length;i++) {
+        totalOriginalStock += inventory[i].originalStock;
+        totalSoldProducts +=inventory[i].sold;
+    }
+    return totalOriginalStock - totalSoldProducts;
+}
