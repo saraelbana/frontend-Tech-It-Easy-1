@@ -6,7 +6,7 @@ export const totalSoldProducts = () =>{
     for(let i =0; i<inventory.length;i++) {
         totalSoldProducts +=inventory[i].sold;
     }
-    return totalSoldProducts;
+    return {title: "Aantal Verkocht ",number : totalSoldProducts};
 }
 
 //opdracht 1c
@@ -15,7 +15,7 @@ export const totalTVsCompanyPurchased = () =>{
     for(let i =0; i<inventory.length;i++){
         totalOriginalStock += inventory[i].originalStock;
     }
-    return totalOriginalStock;
+    return {title: "Aantal ingekocht Producten", number: totalOriginalStock};
 }
 
 //opdracht 1e
@@ -26,5 +26,5 @@ export const totalInStockProducts = () =>{
         totalOriginalStock += inventory[i].originalStock;
         totalSoldProducts +=inventory[i].sold;
     }
-    return totalOriginalStock - totalSoldProducts;
+    return { title:"Aantal te Verkopen Producten",number : totalOriginalStock - totalSoldProducts};
 }

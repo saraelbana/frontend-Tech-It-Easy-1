@@ -1,17 +1,31 @@
 import './App.css';
-
+import {totalInStockProducts, totalSoldProducts, totalTVsCompanyPurchased} from "./helpers/inventorycalculations.js";
+import SellingOverviewArticle from "./components/SellingOverviewArticle.jsx";
 function App() {
+
+
   return (
-    <h1>Tech IT easy dashboard</h1>,
-    <section>
+      <main>
+          <h1>Tech IT easy dashboard</h1>
+          <section>
       <h2>
         VerkoopOverzicht
       </h2>
-      <div id="sellingOverviewArticle"></div>
-      <script type="module" src="/src/components/sellingoverviewarticle.jsx"></script>
+        <div>
+            <SellingOverviewArticle cmdData={totalSoldProducts()} />
+            <SellingOverviewArticle cmdData={totalTVsCompanyPurchased()} />
+            <SellingOverviewArticle cmdData={totalInStockProducts()} />
+        </div>
+          </section>
+          <section>
+              <h2>
+                  Beste Verkochte TV
+              </h2>
+              <div>
 
-    </section>
+              </div>
+          </section>
+      </main>
   );
 }
-
 export default App
