@@ -1,0 +1,5 @@
+article, h3, p{
+    margin: 10px;
+    border: 1px solid #ddd;
+    align-content: center;
+}

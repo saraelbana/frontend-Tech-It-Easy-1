@@ -1,4 +1,5 @@
- function SellingOverviewArticle({cmdData}) {
+import './SellingOverviewArticle.css';
+function SellingOverviewArticle({cmdData}) {
     return (
         <article>
             <h3>
