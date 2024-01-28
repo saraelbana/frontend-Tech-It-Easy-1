@@ -1,6 +1,7 @@
 import './App.css';
 import {totalInStockProducts, totalSoldProducts, totalTVsCompanyPurchased} from "./helpers/inventorycalculations.js";
 import SellingOverviewArticle from "./components/SellingOverviewArticle.jsx";
+import BestSellingArticle from "./components/BestSellingArticle.jsx";
 import HeadingTwo from "./components/HeadingTwo.jsx";
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
               </section>
               <section>
                   <HeadingTwo titleName={"Beste Verkochte TV"}/>
-                  <div>
+                  <div id="secondSectionDiv">
                   </div>
               </section>
           </main>
