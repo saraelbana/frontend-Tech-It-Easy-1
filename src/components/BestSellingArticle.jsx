@@ -3,7 +3,6 @@ function BestSellingArticle(){
     return(
         <article>
 
-
         </article>
     );
 }

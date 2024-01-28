@@ -33,6 +33,18 @@ export const getTVBrandTypeName =(TV) =>{
 
     return {brand: TV.brand, type: TV.type, Name:TV.name};
 }
+
+//opdracht 2b
 export const getTVPrice = (TV) =>{
     return "$"+TV.price+",-";
+}
+
+//opdracht 2c
+export const getScreenSize =(TV) =>{
+    let screenSize;
+    screenSize = TV.availableSizes[0];
+    for(let i =1; i<TV.availableSizes.length; i++){
+        screenSize += ("|" + TV.availableSizes[i]);
+    }
+    return screenSize;
 }
