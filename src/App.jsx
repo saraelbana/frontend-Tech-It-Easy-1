@@ -1,8 +1,15 @@
 import './App.css';
-import {totalInStockProducts, totalSoldProducts, totalTVsCompanyPurchased} from "./helpers/inventorycalculations.js";
+import {
+    getTVBrandTypeName,
+    totalInStockProducts,
+    totalSoldProducts,
+    totalTVsCompanyPurchased
+} from "./helpers/inventorycalculations.js";
 import SellingOverviewArticle from "./components/SellingOverviewArticle.jsx";
 import BestSellingArticle from "./components/BestSellingArticle.jsx";
 import HeadingTwo from "./components/HeadingTwo.jsx";
+import {bestSellingTv} from "./constants/inventory.js";
+
 function App() {
   return (
       <body>
@@ -21,6 +28,7 @@ function App() {
               <section>
                   <HeadingTwo titleName={"Beste Verkochte TV"}/>
                   <div id="secondSectionDiv">
+                  <BestSellingArticle TV={bestSellingTv}/>
                   </div>
               </section>
           </main>
