@@ -33,3 +33,6 @@ export const getTVBrandTypeName =(TV) =>{
 
     return {brand: TV.brand, type: TV.type, Name:TV.name};
 }
+export const getTVPrice = (TV) =>{
+    return "$"+TV.price+",-";
+}
