@@ -1,4 +1,4 @@
-import {inventory} from "../constants/inventory.js";
+import {bestSellingTv, inventory} from "../constants/inventory.js";
 
 //opdracht 1a
 export const totalSoldProducts = () =>{
@@ -27,4 +27,9 @@ export const totalInStockProducts = () =>{
         totalSoldProducts +=inventory[i].sold;
     }
     return { title:"Aantal te Verkopen Producten",number : totalOriginalStock - totalSoldProducts};
+}
+//opdracht 2a
+export const getTVBrandTypeName =(TV) =>{
+
+    return {brand: TV.brand, type: TV.type, Name:TV.name};
 }
