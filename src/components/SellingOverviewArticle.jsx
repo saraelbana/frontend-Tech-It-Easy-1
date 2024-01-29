@@ -1,7 +1,7 @@
 import './SellingOverviewArticle.css';
 function SellingOverviewArticle({cmdData}) {
     return (
-        <article>
+        <article className="TVContainer">
             <h3>
                 {cmdData.title}
             </h3>

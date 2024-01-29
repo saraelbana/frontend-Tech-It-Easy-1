@@ -30,9 +30,7 @@ function App() {
               <section>
                   <HeadingTwo titleName={"Beste Verkochte TV"}/>
                   <div id="secondSectionDiv">
-                      <article>
-                          <BestSellingArticle TV = {bestSellingTv}/>
-                      </article>
+                    <BestSellingArticle TV = {bestSellingTv}/>
                   </div>
               </section>
           </main>
