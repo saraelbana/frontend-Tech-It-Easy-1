@@ -49,3 +49,10 @@ export const getScreenSize = (TV) =>{
 function convertInchToCm(size){
     return size * 2.54;
 }
+export function getTVOptionItemIcon(ApplicableTVOption){
+    if(ApplicableTVOption === true)
+        return "/src/assets/check.png";
+    else
+        return "/src/assets/minus.png";
+}
+export default getTVOptionItemIcon;
