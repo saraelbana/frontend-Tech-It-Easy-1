@@ -34,7 +34,7 @@ export const getTVBrandTypeName =(TV) =>{
 
 //opdracht 2b
 export const getTVPrice = (TV) =>{
-    return "$"+TV.price+",-";
+    return "€"+TV.price+",-";
 }
 
 //opdracht 2c
