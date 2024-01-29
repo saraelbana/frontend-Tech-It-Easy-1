@@ -39,14 +39,13 @@ export const getTVPrice = (TV) =>{
 
 //opdracht 2c
 export const getScreenSize = (TV) =>{
-    let availableSizes = TV.availableSizes;
-    for(let i= 0; i<availableSizes.length; i++){
-        // availableSizes[i] +=
+    let availableSizes = "";
+    availableSizes = TV.availableSizes[0] + " inch (" + convertInchToCm(TV.availableSizes[0]) + " CM)";
+    for(let i= 1; i<TV.availableSizes.length; i++){
+        availableSizes += " | " + TV.availableSizes[i] + " inch (" + convertInchToCm(TV.availableSizes[i]) + " cm)";
     }
-
-
-    return TV.availableSizes.join("|");
+    return availableSizes;
 }
 function convertInchToCm(size){
-
+    return size * 2.54;
 }
