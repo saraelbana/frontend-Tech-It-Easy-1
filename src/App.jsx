@@ -1,9 +1,11 @@
 import './App.css';
 import {
-    getTVBrandTypeName,
     totalInStockProducts,
     totalSoldProducts,
-    totalTVsCompanyPurchased
+    totalTVsCompanyPurchased,
+    getTVBrandTypeName,
+    getTVPrice,
+    getScreenSize
 } from "./helpers/inventorycalculations.js";
 import SellingOverviewArticle from "./components/SellingOverviewArticle.jsx";
 import BestSellingArticle from "./components/BestSellingArticle.jsx";
@@ -28,7 +30,9 @@ function App() {
               <section>
                   <HeadingTwo titleName={"Beste Verkochte TV"}/>
                   <div id="secondSectionDiv">
-                  <BestSellingArticle TV={bestSellingTv}/>
+                      <article>
+                          <BestSellingArticle TV = {bestSellingTv}/>
+                      </article>
                   </div>
               </section>
           </main>

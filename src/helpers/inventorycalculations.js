@@ -6,7 +6,7 @@ export const totalSoldProducts = () =>{
     for(let i =0; i<inventory.length;i++) {
         totalSoldProducts +=inventory[i].sold;
     }
-    return {title: "Aantal Verkocht ",number : totalSoldProducts};
+    return {title: "Aantal Verkocht ", number: totalSoldProducts};
 }
 
 //opdracht 1c
@@ -20,16 +20,14 @@ export const totalTVsCompanyPurchased = () =>{
 
 //opdracht 1e
 export const totalInStockProducts = () =>{
-    let totalSoldProducts = 0;
-    let totalOriginalStock = 0;
-    for(let i =0; i<inventory.length;i++) {
-        totalOriginalStock += inventory[i].originalStock;
-        totalSoldProducts +=inventory[i].sold;
-    }
-    return { title:"Aantal te Verkopen Producten",number : totalOriginalStock - totalSoldProducts};
+    const totalProductsSold = totalSoldProducts().number;
+    const totalOriginalStock = totalTVsCompanyPurchased().number;
+    return {title:"Aantal te Verkopen Producten", number: totalOriginalStock - totalProductsSold};
 }
+
 //opdracht 2a
 export const getTVBrandTypeName =(TV) =>{
+    console.log(TV);
 
     return {brand: TV.brand, type: TV.type, Name:TV.name};
 }
@@ -40,11 +38,15 @@ export const getTVPrice = (TV) =>{
 }
 
 //opdracht 2c
-export const getScreenSize =(TV) =>{
-    let screenSize;
-    screenSize = TV.availableSizes[0];
-    for(let i =1; i<TV.availableSizes.length; i++){
-        screenSize += ("|" + TV.availableSizes[i]);
+export const getScreenSize = (TV) =>{
+    let availableSizes = TV.availableSizes;
+    for(let i= 0; i<availableSizes.length; i++){
+        // availableSizes[i] +=
     }
-    return screenSize;
+
+
+    return TV.availableSizes.join("|");
+}
+function convertInchToCm(size){
+
 }
