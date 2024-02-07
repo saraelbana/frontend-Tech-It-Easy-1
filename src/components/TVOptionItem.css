@@ -1,0 +1,9 @@
+.OptionsIconsList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imgIcon{
+    width:25px;
+    height:25px;
+    }
