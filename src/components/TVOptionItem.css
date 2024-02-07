@@ -1,9 +1,9 @@
-.ListIcon {
+.OptionsIconsList {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-imgIcon{
-    width:10px;
-    height:10px;
+.imgIcon{
+    width:25px;
+    height:25px;
     }

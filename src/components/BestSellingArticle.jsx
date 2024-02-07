@@ -23,11 +23,16 @@ function BestSellingArticle({TV}){
                 </p>
                 <p>
                     <ul className="OptionsList">
-                        <TVOptionItem TVOption={TV.options[0]}/>
-                        <TVOptionItem TVOption={TV.options[1]}/>
-                        <TVOptionItem TVOption={TV.options[2]}/>
-                        <TVOptionItem TVOption={TV.options[3]}/>
-                        <TVOptionItem TVOption={TV.options[4]}/>
+                        {/*{TV.Options.map((option) => {*/}
+                        {/*    for(let i = 0; i < TV.Options.length; i++){*/}
+                        {/*        return <TVOptionItem TVOption={option}/>*/}
+                        {/*    }*/}
+                        {/*})}*/}
+                        <TVOptionItem TVOption= {TV.options[0]}/>
+                        <TVOptionItem TVOption= {TV.options[1]}/>
+                        <TVOptionItem TVOption= {TV.options[2]}/>
+                        <TVOptionItem TVOption= {TV.options[3]}/>
+                        <TVOptionItem TVOption= {TV.options[4]}/>
                     </ul>
                 </p>
             </div>

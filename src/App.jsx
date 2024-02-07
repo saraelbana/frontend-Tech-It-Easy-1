@@ -14,7 +14,7 @@ import {bestSellingTv} from "./constants/inventory.js";
 
 function App() {
   return (
-      <body>
+
           <main>
               <section>
                   <h1>Tech IT easy dashboard</h1>
@@ -34,7 +34,6 @@ function App() {
                   </div>
               </section>
           </main>
-      </body>
   );
 }
 export default App

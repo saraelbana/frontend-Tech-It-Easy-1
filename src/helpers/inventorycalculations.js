@@ -39,15 +39,18 @@ export const getTVPrice = (TV) =>{
 
 //opdracht 2c
 export const getScreenSize = (TV) =>{
-    let availableSizes = "";
-    availableSizes = TV.availableSizes[0] + " inch (" + convertInchToCm(TV.availableSizes[0]) + " CM)";
-    for(let i= 1; i<TV.availableSizes.length; i++){
-        availableSizes += " | " + TV.availableSizes[i] + " inch (" + convertInchToCm(TV.availableSizes[i]) + " cm)";
-    }
-    return availableSizes;
+
+   return TV.availableSizes.map((size) => `${size} inch (${convertInchToCm(size)} cm)`).join(" | ");
+   //  let availableSizes = "";
+   //  availableSizes = TV.availableSizes[0] + " inch (" + convertInchToCm(TV.availableSizes[0]) + " CM)";
+   //  for(let i= 1; i<TV.availableSizes.length; i++){
+   //      availableSizes += " | " + TV.availableSizes[i] + " inch (" + convertInchToCm(TV.availableSizes[i]) + " cm)";
+   //  }
+   //  return availableSizes;
 }
+
 function convertInchToCm(size){
-    return size * 2.54;
+    return Math.round(size * 2.54);
 }
 export function getTVOptionItemIcon(ApplicableTVOption){
     if(ApplicableTVOption === true)
@@ -56,3 +59,8 @@ export function getTVOptionItemIcon(ApplicableTVOption){
         return "/src/assets/minus.png";
 }
 export default getTVOptionItemIcon;
+
+/*
+From the Huiswerk begeleiden les a different approach to solve getScreenSizes function
+* export function getScreenSize2(sizesArray){
+* return sizesArray.map((size) =>{return '${size} inch (${Math.round(size*2.54)})cm'}).join("| ");}*/
