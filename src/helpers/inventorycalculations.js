@@ -81,6 +81,7 @@ console.log(tvInfo);
 const suitableForSports = inventory.map(tv => {
     return {
         name: `${tv.brand} ${tv.name}`,
+        //if tv.refreshRate is greater than or equal to 100, then true, else false
         suitable: tv.refreshRate >= 100 ? true : false
     };
 });
