@@ -68,4 +68,7 @@ From the Huiswerk begeleiden les a different approach to solve getScreenSizes fu
 //Deel 2 opdrachten
 // 1a
 const tvTypeNames = inventory.map(tv => tv.type);
-
+console.log(tvTypeNames);
+// 1b
+const completelySoldOutTVs = inventory.filter(tv => tv.sold === tv.originalStock);
+console.log(completelySoldOutTVs);
