@@ -72,3 +72,7 @@ console.log(tvTypeNames);
 // 1b
 const completelySoldOutTVs = inventory.filter(tv => tv.sold === tv.originalStock);
 console.log(completelySoldOutTVs);
+
+//1c
+const tvInfo = inventory.find(tv => tv.type === 'NH3216SMART');
+console.log(tvInfo);
