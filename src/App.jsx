@@ -35,11 +35,11 @@ function App() {
               </section>
               <section>
                   <HeadingTwo titleName={"Alle TVs"}/>
-              {/*    <div id="thirdSectionDiv">*/}
-              {/*        <ProductDetailsPanel TV={getTVBrandTypeName("Samsung")}/>*/}
-              {/*        <ProductDetailsPanel TV={getTVBrandTypeName("LG")}/>*/}
-              {/*        <ProductDetailsPanel TV={getTVBrandTypeName("Sony")}/>*/}
-              {/*      </div>*/}
+                  <div className={"filterMenuButtonsDiv"}>
+                    <button id="mostSoldButton">Meest verkocht eerst</button>
+                     <button id="cheapestButton">Goedkoopste eerst</button>
+                    <button id="bestForSportsButton">Meest geschikt voor sport eerst</button>
+                  </div>
               </section>
           </main>
   );
