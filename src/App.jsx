@@ -8,7 +8,7 @@ import {
     getScreenSize
 } from "./helpers/inventorycalculations.js";
 import SellingOverviewArticle from "./components/SellingOverviewArticle.jsx";
-import BestSellingArticle from "./components/BestSellingArticle.jsx";
+import ProductDetailsPanel from "./components/ProductDetailsPanel.jsx";
 import HeadingTwo from "./components/HeadingTwo.jsx";
 import {bestSellingTv} from "./constants/inventory.js";
 
@@ -30,8 +30,16 @@ function App() {
               <section>
                   <HeadingTwo titleName={"Beste Verkochte TV"}/>
                   <div id="secondSectionDiv">
-                    <BestSellingArticle TV={bestSellingTv}/>
+                    <ProductDetailsPanel TV={bestSellingTv}/>
                   </div>
+              </section>
+              <section>
+                  <HeadingTwo titleName={"Alle TVs"}/>
+              {/*    <div id="thirdSectionDiv">*/}
+              {/*        <ProductDetailsPanel TV={getTVBrandTypeName("Samsung")}/>*/}
+              {/*        <ProductDetailsPanel TV={getTVBrandTypeName("LG")}/>*/}
+              {/*        <ProductDetailsPanel TV={getTVBrandTypeName("Sony")}/>*/}
+              {/*      </div>*/}
               </section>
           </main>
   );

@@ -1,11 +1,11 @@
-import './BestSellingArticle.css';
+import './ProductDetailsPanel.css';
 import {getTVBrandTypeName, getTVPrice, getScreenSize} from "../helpers/inventorycalculations.js";
 import SellingOverviewArticle from "./SellingOverviewArticle.jsx";
 import {bestSellingTv} from "../constants/inventory.js";
 import TVOptionItem from "./TVOptionItem.jsx";
 
 
-function BestSellingArticle({TV}){
+function ProductDetailsPanel({TV}){
     return(
         <article>
             <div>
@@ -40,4 +40,4 @@ function BestSellingArticle({TV}){
     );
 }
 
-export default BestSellingArticle;
+export default ProductDetailsPanel;

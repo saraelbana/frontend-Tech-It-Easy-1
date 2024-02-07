@@ -64,3 +64,8 @@ export default getTVOptionItemIcon;
 From the Huiswerk begeleiden les a different approach to solve getScreenSizes function
 * export function getScreenSize2(sizesArray){
 * return sizesArray.map((size) =>{return '${size} inch (${Math.round(size*2.54)})cm'}).join("| ");}*/
+
+//Deel 2 opdrachten
+// 1a
+const tvTypeNames = inventory.map(tv => tv.type);
+
