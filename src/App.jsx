@@ -5,7 +5,7 @@ import {
     totalTVsCompanyPurchased,
     getTVBrandTypeName,
     getTVPrice,
-    getScreenSize
+    getScreenSize, sortedInventory
 } from "./helpers/inventorycalculations.js";
 import SellingOverviewArticle from "./components/SellingOverviewArticle.jsx";
 import ProductDetailsPanel from "./components/ProductDetailsPanel.jsx";
@@ -37,11 +37,10 @@ function App() {
                   <HeadingTwo titleName={"Alle TVs"}/>
                   <div className={"filterMenuButtonsDiv"}>
                       <button type="button" id="mostSoldButton" onClick={completelySoldOutTVs}>Meest verkocht eerst</button>
-                      <button type="button" id="cheapestButton" onClick={filterByCheapest}>Goedkoopste eerst</button>
+                      <button type="button" id="cheapestButton" onClick={sortedInventory}>Goedkoopste eerst</button>
                       <button type="button" id="bestForSportsButton" onClick={suitableForSports}>Meest geschikt voor sport eerst</button>
                   </div>
                     <div id="thirdSectionDiv">
-
                         <ProductDetailsPanel TV={bestSellingTv}/>
                     </div>
               </section>
