@@ -76,3 +76,13 @@ console.log(completelySoldOutTVs);
 //1c
 const tvInfo = inventory.find(tv => tv.type === 'NH3216SMART');
 console.log(tvInfo);
+
+//1d
+const suitableForSports = inventory.map(tv => {
+    return {
+        name: `${tv.brand} ${tv.name}`,
+        suitable: tv.refreshRate >= 100 ? true : false
+    };
+});
+
+console.log(suitableForSports);
