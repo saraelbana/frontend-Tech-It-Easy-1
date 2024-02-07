@@ -67,25 +67,29 @@ From the Huiswerk begeleiden les a different approach to solve getScreenSizes fu
 
 //Deel 2 opdrachten
 // 1a
-const tvTypeNames = inventory.map(tv => tv.type);
+export const tvTypeNames = inventory.map(tv => tv.type);
 console.log(tvTypeNames);
 // 1b
-const completelySoldOutTVs = inventory.filter(tv => tv.sold === tv.originalStock);
+export const completelySoldOutTVs = inventory.filter(tv => tv.sold === tv.originalStock);
 console.log(completelySoldOutTVs);
 
 //1c
-const tvInfo = inventory.find(tv => tv.type === 'NH3216SMART');
+export const tvInfo = inventory.find(tv => tv.type === 'NH3216SMART');
 console.log(tvInfo);
 
 //1d
-const suitableForSports = inventory.map(tv => {
+export const suitableForSports = inventory.map(tv => {
     return {
         name: `${tv.brand} ${tv.name}`,
         //if tv.refreshRate is greater than or equal to 100, then true, else false
         suitable: tv.refreshRate >= 100 ? true : false
     };
 });
-
 console.log(suitableForSports);
 
-//
+// sorting by cheapest price
+const sortByCheapestFirst = (inventory) => {
+    return inventory.sort((tv1, tv2) => tv1.price - tv2.price);
+};
+
+export const sortedInventory = sortByCheapestFirst(inventory);

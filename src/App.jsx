@@ -36,10 +36,14 @@ function App() {
               <section>
                   <HeadingTwo titleName={"Alle TVs"}/>
                   <div className={"filterMenuButtonsDiv"}>
-                    <button id="mostSoldButton">Meest verkocht eerst</button>
-                     <button id="cheapestButton">Goedkoopste eerst</button>
-                    <button id="bestForSportsButton">Meest geschikt voor sport eerst</button>
+                      <button type="button" id="mostSoldButton" onClick={completelySoldOutTVs}>Meest verkocht eerst</button>
+                      <button type="button" id="cheapestButton" onClick={filterByCheapest}>Goedkoopste eerst</button>
+                      <button type="button" id="bestForSportsButton" onClick={suitableForSports}>Meest geschikt voor sport eerst</button>
                   </div>
+                    <div id="thirdSectionDiv">
+
+                        <ProductDetailsPanel TV={bestSellingTv}/>
+                    </div>
               </section>
           </main>
   );
